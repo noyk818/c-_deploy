@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - cd ${TARGET_DIR}
+  build:
+    commands:
+      - |
+        rm /codebuild/global.json -f
+        sam build
+  post_build:
+    commands:
+      - |
+        sam deploy --stack-name ${STAKE_NAME} \
+          --no-confirm-changeset \
+          --no-fail-on-empty-changeset \
+          --config-env ${ENVIRONMENT} \
+          --parameter-overrides \
+            Environment=${ENVIRONMENT}
+

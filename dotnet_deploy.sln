@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyLambdaFunction", "MyLambdaFunction", "{D86651E4-0138-4471-B8F7-8E2CEB1EEE34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5459075B-D011-47E8-A068-064B47844945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLambdaFunction", "MyLambdaFunction\src\MyLambdaFunction\MyLambdaFunction.csproj", "{4F717E56-ED09-4DB7-A658-DD7EB9E112AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F717E56-ED09-4DB7-A658-DD7EB9E112AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F717E56-ED09-4DB7-A658-DD7EB9E112AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F717E56-ED09-4DB7-A658-DD7EB9E112AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F717E56-ED09-4DB7-A658-DD7EB9E112AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5459075B-D011-47E8-A068-064B47844945} = {D86651E4-0138-4471-B8F7-8E2CEB1EEE34}
+		{4F717E56-ED09-4DB7-A658-DD7EB9E112AB} = {5459075B-D011-47E8-A068-064B47844945}
+	EndGlobalSection
+EndGlobal

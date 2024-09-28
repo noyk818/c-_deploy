@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Template for dotnet-deploy
+Parameters:
+  Environment:
+    Type: String
+    AllowedValues:
+      - development # 開発環境
+      - staging # ステージング環境
+      - production # 本番環境
+    Default: development
+
+Resources:
+  SFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub ${Environment}-dotnet-deploy
+      PackageType: Zip
+      Handler: StatisticsMonitor::StatisticsMonitor.Function::FunctionHandler
+      Runtime: dotnet8
+      CodeUri: "."
+      MemorySize: 128
+      Timeout: 300
+      Environment:
+        Variables:
+          ASPNETCORE_ENVIRONMENT: !Ref Environment
+      Tags:
+        Environment: !Ref Environment
